@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MINDI - Bonnet Satiné pour Femmes Voilées</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .jumbotron {
+            background-color: #4a266a;
+            color: white;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .container-fluid {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #9b5fa1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1>MINDI</h1>
+    <p>Exprimez votre beauté intérieure avec nos soins capillaires adaptés au hijab</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Le Bonnet Satiné MINDI</h2>
+            <p>Notre bonnet satiné est spécialement conçu pour les femmes portant le hijab. Il offre confort, protection et élégance tout en prenant soin de vos cheveux. Fabriqué à partir de satin de soie upcyclé, il est doux, respirant et respectueux de l'environnement. En portant notre bonnet satiné, vous vous offrez le bien-être capillaire que vous méritez tout en affichant votre style et vos valeurs.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="https://exemple-image-bonnet-satine.com" alt="Bonnet Satiné MINDI" style="width:100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Confort ultime</h3>
+            <p>Le bonnet satiné MINDI est fabriqué avec un tissu doux et respirant pour un confort optimal tout au long de la journée. Sa conception ergonomique s'adapte parfaitement à la forme de votre tête, vous offrant un bien-être inégalé.</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Protection et soin des cheveux</h3>
+            <p>Le satin de soie upcyclé aide à prévenir les frictions et la casse des cheveux, tout en préservant leur hydratation naturelle. Ainsi, vos cheveux restent en bonne santé et resplendissants, même sous le hijab.</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Engagement éthique & durable</h3>
+            <p>Nous utilisons des tissus upcyclés et favorisons les partenariats locaux pour créer des produits respectueux de l'environnement et éthiques. En choisissant MINDI, vous soutenez une entreprise engagée pour un             futur plus responsable.</p>
+        </div>
+    </div>
+    <div class="row" style="text-align: center; padding-top: 20px;">
+        <div class="col-sm-12">
+            <h3>Reste informé(e) sur les nouveautés MINDI</h3>
+            <p>Inscris toi à notre liste de diffusion pour être les premiers informés de nos actualités, promotions et lancements de produits.</p>
+            <form id="email-form">
+                <input type="email" id="email" placeholder="Ton adresse e-mail" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById("email-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+
+    fetch('https://docs.google.com/spreadsheets/d/1_tw6VW2f_ElwWzrJ0e821foLrepI2eJLCE9-fkp4OTE/edit?usp=sharing', {
+        method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'email=' + encodeURIComponent(email)
+    }).then(function () {
+        alert('Super! Merci de ton intérêt pour MINDI!');
+    }).catch(function (error) {
+        alert("Une erreur s'est produite. Réessaye plus tard.");
+    });
+});
+</script>
+<!-- Instagram link -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="https://www.instagram.com/your_instagram_username/" target="_blank" style="text-decoration: none; font-size: 18px; color: #9C27B0;">
+        Suivez-nous sur Instagram
+    </a>
+</div>
+
+<!-- TikTok link -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="https://www.tiktok.com/@your_tiktok_username" target="_blank" style="text-decoration: none; font-size: 18px; color: #9C27B0;">
+        Suivez-nous sur TikTok
+    </a>
+</div>
+</body>
+</html>
+
